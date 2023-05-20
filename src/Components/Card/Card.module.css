@@ -1,0 +1,16 @@
+.card{
+    padding: 2em;
+    width: 300px;
+    border: 3px solid beige;
+    border-radius: 10px;
+    background-color: grey;
+    margin-bottom: 10px;
+    box-shadow: 3px 5px 8px #000;
+  }
+  
+.cardImg{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}

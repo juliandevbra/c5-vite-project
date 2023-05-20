@@ -1,9 +1,9 @@
 import React from 'react'
 import imgpizza from '../assets/pizza_de_mozzarella.jpg'
-import Card from './Card'
+import Card from './Card/Card'
+import { styled } from 'styled-components'
 
 const Home = () => {
-
 
     let pizzas = [
         { id: 1, tipo: 'Muzzarella', precio: '$1200', img: imgpizza },
@@ -15,11 +15,23 @@ const Home = () => {
     ]
 
   return (
-    <div >
-        <h1>Lista de pizzas</h1>
+    <Container>
+        <h1 >Lista de pizzas</h1>
         {pizzas.map(pizza => <Card key={pizza.id} menu={pizza}/>)}
-    </div>
+    </Container>
+    
   )
 }
 
 export default Home
+
+
+const Container = styled.div`
+  margin-top: 40px;
+  background-color: skyblue;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+`
