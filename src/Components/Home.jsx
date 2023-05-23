@@ -3,7 +3,7 @@ import imgpizza from '../assets/pizza_de_mozzarella.jpg'
 import Card from './Card/Card'
 import { styled } from 'styled-components'
 
-const Home = () => {
+const Home = ({setCart, cart}) => {
 
     let pizzas = [
         { id: 1, tipo: 'Muzzarella', precio: '$1200', img: imgpizza },
@@ -16,15 +16,17 @@ const Home = () => {
 
   return (
     <Container>
+<React.Fragment>
+
+</React.Fragment>
+
         <h1 >Lista de pizzas</h1>
-        {pizzas.map(pizza => <Card key={pizza.id} menu={pizza}/>)}
+        {pizzas.map(pizza => <Card cart={cart} setCart={setCart} key={pizza.id} menu={pizza}/>)}
     </Container>
-    
   )
 }
 
 export default Home
-
 
 const Container = styled.div`
   margin-top: 40px;
@@ -33,5 +35,4 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
 `
