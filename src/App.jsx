@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Cart from './Components/Cart'
+import Form from './Components/Form'
 import Home from './Components/Home'
 import Navbar from './Components/Navbar'
 
@@ -13,6 +14,7 @@ function App() {
       <Navbar/>
       <Home cart={cart} setCart={setCart}/>
       <Cart cart={cart}/>
+      <Form/>
     </>
   )
 }

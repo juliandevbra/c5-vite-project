@@ -7,7 +7,6 @@ const Card = ({menu, setCart, cart}) => {
   // let contador = 0
   const {img, tipo, precio} = menu
 
-
   const sumar = () => {
     setCounter(counter+1)
   }

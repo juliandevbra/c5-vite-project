@@ -16,10 +16,6 @@ const Home = ({setCart, cart}) => {
 
   return (
     <Container>
-<React.Fragment>
-
-</React.Fragment>
-
         <h1 >Lista de pizzas</h1>
         {pizzas.map(pizza => <Card cart={cart} setCart={setCart} key={pizza.id} menu={pizza}/>)}
     </Container>

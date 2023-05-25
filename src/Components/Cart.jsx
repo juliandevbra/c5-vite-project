@@ -4,7 +4,7 @@ const Cart = ({cart}) => {
   return (
     <div>
         {console.log(cart)}
-        {cart.map(item => <li key={item.id}>{item.tipo}</li>)}
+        {cart.map((item, index) => <li key={index}>{item.tipo}</li>)}
     </div>
   )
 }
