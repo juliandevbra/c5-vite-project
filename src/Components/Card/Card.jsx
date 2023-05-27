@@ -1,20 +1,24 @@
 import { useState } from 'react'
 import cardStyle from './Card.module.css'
 
-const Card = ({menu, setCart, cart}) => {
+const Card = ({menu, setCart}) => {
 
   const [counter, setCounter] = useState(0)
   // let contador = 0
   const {img, tipo, precio} = menu
 
   const sumar = () => {
-    setCounter(counter+1)
+    setCounter((prevCounter) => prevCounter + 1)
   }
   
   const restar = () => {
-    setCounter(counter-1)
+    setCounter(counter - 1)
   }
 
+  const addCart = () => {
+    const productoAgregado = {...menu, cantidad: counter}
+    setCart((prevCart) => [...prevCart, productoAgregado])
+  }
 
   return (
     <div className={cardStyle.card} >
@@ -26,7 +30,7 @@ const Card = ({menu, setCart, cart}) => {
           <h5 style={{margin: '10px'}}>{counter}</h5> 
           <button onClick={sumar}>+</button>
         </div>
-        <button onClick={() => setCart([...cart, menu])}>Agregar al carrito 🛒</button>
+        <button disabled={counter === 0} onClick={addCart}>Agregar al carrito 🛒</button>
 
         {/* Por que no usar variables comunes */}
         {/* <h5>{contador}</h5> <button onClick={() => {

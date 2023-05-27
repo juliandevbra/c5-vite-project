@@ -3,8 +3,9 @@ import React from 'react'
 const Cart = ({cart}) => {
   return (
     <div>
+      <button>Agregar al carrito</button>
         {console.log(cart)}
-        {cart.map((item, index) => <li key={index}>{item.tipo}</li>)}
+        {cart.map((menu, index) => <li key={index}>{menu.tipo} - cantidad: {menu.cantidad}</li>)}
     </div>
   )
 }
